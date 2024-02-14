@@ -9,7 +9,10 @@
         <title>Virtual Flower For U</title>
     </head>
     <body class="container">
-        <audio src=""></audio>
+        <audio id="audioPlayer" autoplay>
+            <source src="giveyouflowers.mp3" type="audio/mpeg">
+        </audio>
+        
         <div class="night"></div>
         <div class="flowers">
         <div class="flower flower--1">
@@ -307,7 +310,14 @@
             </div>
         </div>
         </div>
-        
+        <script>
+            // Wait for the page to load
+            window.addEventListener('load', function() {
+                // Play the audio
+                var audio = document.getElementById('audioPlayer');
+                audio.play();
+            });
+        </script>
         <script src="main.js"></script>
     </body>
     </html>
